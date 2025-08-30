@@ -117,10 +117,10 @@ export const WaterSaverGame = ({ onGameComplete }: WaterSaverGameProps) => {
   if (gameState === "waiting") {
     return (
       <Card className="w-full max-w-md mx-auto">
-        <CardContent className="p-6 text-center">
+        <CardContent className="p-4 sm:p-6 text-center">
           <div className="mb-4">
-            <i className="fas fa-tint text-6xl text-blue-500 mb-4"></i>
-            <h3 className="text-xl font-bold mb-2">Water Saver Challenge</h3>
+            <i className="fas fa-tint text-5xl sm:text-6xl text-blue-500 mb-3 sm:mb-4"></i>
+            <h3 className="text-lg sm:text-xl font-bold mb-2">Water Saver Challenge</h3>
             <p className="text-muted-foreground text-sm">
               Click on dripping taps to stop water waste!
             </p>
@@ -154,17 +154,17 @@ export const WaterSaverGame = ({ onGameComplete }: WaterSaverGameProps) => {
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
-      <CardContent className="p-6">
-        <div className="flex justify-between items-center mb-4">
-          <div className="text-lg font-semibold">Score: {score}</div>
-          <div className="text-lg font-semibold">Time: {timeLeft}s</div>
+      <CardContent className="p-4 sm:p-6">
+        <div className="flex justify-between items-center mb-3 sm:mb-4">
+          <div className="text-base sm:text-lg font-semibold">Score: {score}</div>
+          <div className="text-base sm:text-lg font-semibold">Time: {timeLeft}s</div>
         </div>
         <canvas
           ref={canvasRef}
-          className="w-full h-96 border border-border rounded-lg bg-gradient-to-br from-blue-50 to-cyan-50"
+          className="w-full h-64 sm:h-96 border border-border rounded-lg bg-gradient-to-br from-blue-50 to-cyan-50"
           data-testid="canvas-water-saver"
         />
-        <p className="text-sm text-muted-foreground mt-2 text-center">
+        <p className="text-xs sm:text-sm text-muted-foreground mt-2 text-center">
           Click on the red dripping taps to turn them off!
         </p>
       </CardContent>

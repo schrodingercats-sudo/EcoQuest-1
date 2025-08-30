@@ -11,7 +11,9 @@ export const BadgeType = z.enum([
   "green_thumb",
   "eco_champion",
   "planet_protector",
-  "carbon_crusher"
+  "carbon_crusher",
+  "ocean_guardian",
+  "climate_champion"
 ]);
 export type BadgeType = z.infer<typeof BadgeType>;
 
@@ -19,7 +21,10 @@ export type BadgeType = z.infer<typeof BadgeType>;
 export const GameType = z.enum([
   "waste_sorting",
   "water_saver",
-  "plant_tree"
+  "plant_tree",
+  "energy_saver",
+  "ocean_cleanup",
+  "carbon_footprint"
 ]);
 export type GameType = z.infer<typeof GameType>;
 

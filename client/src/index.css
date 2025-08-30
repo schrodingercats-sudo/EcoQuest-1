@@ -1,8 +1,56 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
+/* Tailwind CSS directives - Ignore CSS validation errors for these lines */
+/* stylelint-disable at-rule-no-unknown */
+/* csslint ignore:start */
+/* Unknown at rule @tailwind css(unknownAtRules) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
+/* csslint ignore:end */
+
+/* Mobile-first responsive improvements */
+@layer utilities {
+  .text-responsive {
+    @apply text-sm sm:text-base md:text-lg;
+  }
+  
+  .heading-responsive {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  .padding-responsive {
+    @apply p-4 sm:p-6 lg:p-8;
+  }
+  
+  .margin-responsive {
+    @apply m-4 sm:m-6 lg:m-8;
+  }
+  
+  .gap-responsive {
+    @apply gap-3 sm:gap-4 md:gap-6;
+  }
+}
+
+/* Touch-friendly interactive elements */
+@layer base {
+  @media (hover: none) {
+    .hover\:scale-105:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+/* Improve text readability on small screens */
+@layer base {
+  @media (max-width: 640px) {
+    body {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+}
 
 :root {
   --background: hsl(210, 20%, 98%);

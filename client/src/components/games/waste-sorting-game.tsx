@@ -132,10 +132,10 @@ export const WasteSortingGame = ({ onGameComplete }: WasteSortingGameProps) => {
   if (gameState === "waiting") {
     return (
       <Card className="w-full max-w-md mx-auto">
-        <CardContent className="p-6 text-center">
+        <CardContent className="p-4 sm:p-6 text-center">
           <div className="mb-4">
-            <i className="fas fa-recycle text-6xl text-primary mb-4"></i>
-            <h3 className="text-xl font-bold mb-2">Waste Sorting Challenge</h3>
+            <i className="fas fa-recycle text-5xl sm:text-6xl text-primary mb-3 sm:mb-4"></i>
+            <h3 className="text-lg sm:text-xl font-bold mb-2">Waste Sorting Challenge</h3>
             <p className="text-muted-foreground text-sm">
               Drag items to the correct recycling bins!
             </p>
@@ -169,17 +169,17 @@ export const WasteSortingGame = ({ onGameComplete }: WasteSortingGameProps) => {
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
-      <CardContent className="p-6">
-        <div className="flex justify-between items-center mb-4">
-          <div className="text-lg font-semibold">Score: {score}</div>
-          <div className="text-lg font-semibold">Time: {timeLeft}s</div>
+      <CardContent className="p-4 sm:p-6">
+        <div className="flex justify-between items-center mb-3 sm:mb-4">
+          <div className="text-base sm:text-lg font-semibold">Score: {score}</div>
+          <div className="text-base sm:text-lg font-semibold">Time: {timeLeft}s</div>
         </div>
         <canvas
           ref={canvasRef}
-          className="w-full h-96 border border-border rounded-lg bg-gradient-to-br from-green-50 to-blue-50"
+          className="w-full h-64 sm:h-96 border border-border rounded-lg bg-gradient-to-br from-green-50 to-blue-50"
           data-testid="canvas-waste-sorting"
         />
-        <p className="text-sm text-muted-foreground mt-2 text-center">
+        <p className="text-xs sm:text-sm text-muted-foreground mt-2 text-center">
           Drag the colored items to matching bins!
         </p>
       </CardContent>

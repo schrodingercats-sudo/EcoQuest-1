@@ -114,28 +114,28 @@ export default function TeacherDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 py-4 sm:py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Teacher Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8"
+          className="mb-6 sm:mb-8"
         >
           <Card>
-            <CardContent className="p-6">
-              <div className="flex flex-col md:flex-row items-center justify-between">
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
-                    <i className="fas fa-chalkboard-teacher text-2xl text-white"></i>
+            <CardContent className="p-4 sm:p-6">
+              <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+                <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
+                    <i className="fas fa-chalkboard-teacher text-xl sm:text-2xl text-white"></i>
                   </div>
-                  <div>
-                    <h2 className="text-2xl font-bold text-foreground">{user.name}</h2>
-                    <p className="text-muted-foreground">Environmental Science Teacher</p>
+                  <div className="text-center sm:text-left">
+                    <h2 className="text-lg sm:text-2xl font-bold text-foreground">{user.name}</h2>
+                    <p className="text-sm text-muted-foreground">Environmental Science Teacher</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4 mt-4 md:mt-0">
-                  <Button onClick={exportToCSV} className="bg-primary hover:bg-primary/90" data-testid="button-export-csv">
+                <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                  <Button onClick={exportToCSV} className="bg-primary hover:bg-primary/90 w-full sm:w-auto" data-testid="button-export-csv">
                     <i className="fas fa-download mr-2"></i>Export CSV
                   </Button>
                 </div>
@@ -150,59 +150,59 @@ export default function TeacherDashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="grid lg:grid-cols-4 gap-6 mb-8"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-6 sm:mb-8"
           >
             <Card>
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-muted-foreground text-sm font-medium">Total Students</p>
-                    <p className="text-3xl font-bold text-foreground">{classStats.totalStudents}</p>
+                    <p className="text-muted-foreground text-xs sm:text-sm font-medium">Total Students</p>
+                    <p className="text-2xl sm:text-3xl font-bold text-foreground">{classStats.totalStudents}</p>
                   </div>
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-users text-primary text-xl"></i>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <i className="fas fa-users text-primary text-lg sm:text-xl"></i>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             <Card>
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-muted-foreground text-sm font-medium">Average Score</p>
-                    <p className="text-3xl font-bold text-foreground">{classStats.averageScore}</p>
+                    <p className="text-muted-foreground text-xs sm:text-sm font-medium">Average Score</p>
+                    <p className="text-2xl sm:text-3xl font-bold text-foreground">{classStats.averageScore}</p>
                   </div>
-                  <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-chart-line text-secondary text-xl"></i>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
+                    <i className="fas fa-chart-line text-secondary text-lg sm:text-xl"></i>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             <Card>
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-muted-foreground text-sm font-medium">Badges Earned</p>
-                    <p className="text-3xl font-bold text-foreground">{classStats.totalBadges}</p>
+                    <p className="text-muted-foreground text-xs sm:text-sm font-medium">Badges Earned</p>
+                    <p className="text-2xl sm:text-3xl font-bold text-foreground">{classStats.totalBadges}</p>
                   </div>
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-medal text-accent text-xl"></i>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <i className="fas fa-medal text-accent text-lg sm:text-xl"></i>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             <Card>
-              <CardContent className="p-6">
+              <CardContent className="p-4 sm:p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-muted-foreground text-sm font-medium">Active Today</p>
-                    <p className="text-3xl font-bold text-foreground">{classStats.activeToday}</p>
+                    <p className="text-muted-foreground text-xs sm:text-sm font-medium">Active Today</p>
+                    <p className="text-2xl sm:text-3xl font-bold text-foreground">{classStats.activeToday}</p>
                   </div>
-                  <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center">
-                    <i className="fas fa-user-check text-green-500 text-xl"></i>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-500/10 rounded-lg flex items-center justify-center">
+                    <i className="fas fa-user-check text-green-500 text-lg sm:text-xl"></i>
                   </div>
                 </div>
               </CardContent>
@@ -215,18 +215,19 @@ export default function TeacherDashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="grid lg:grid-cols-2 gap-6 mb-8"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8"
         >
           {/* Progress Chart */}
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center">
+              <CardTitle className="flex items-center text-base sm:text-lg">
                 <i className="fas fa-chart-line text-primary mr-2"></i>
-                Student Progress Over Time
+                <span className="hidden sm:inline">Student Progress Over Time</span>
+                <span className="sm:hidden">Student Progress</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="h-64">
+              <div className="h-48 sm:h-64">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={progressData}>
                     <CartesianGrid strokeDasharray="3 3" />
@@ -249,13 +250,14 @@ export default function TeacherDashboard() {
           {/* Game Performance Chart */}
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center">
+              <CardTitle className="flex items-center text-base sm:text-lg">
                 <i className="fas fa-gamepad text-secondary mr-2"></i>
-                Game Performance
+                <span className="hidden sm:inline">Game Performance</span>
+                <span className="sm:hidden">Games</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="h-64">
+              <div className="h-48 sm:h-64">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={[
                     { game: "Waste Sort", completion: 85 },

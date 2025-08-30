@@ -139,10 +139,10 @@ export const PlantTreeGame = ({ onGameComplete }: PlantTreeGameProps) => {
   if (gameState === "waiting") {
     return (
       <Card className="w-full max-w-md mx-auto">
-        <CardContent className="p-6 text-center">
+        <CardContent className="p-4 sm:p-6 text-center">
           <div className="mb-4">
-            <i className="fas fa-seedling text-6xl text-green-500 mb-4"></i>
-            <h3 className="text-xl font-bold mb-2">Plant a Tree Challenge</h3>
+            <i className="fas fa-seedling text-5xl sm:text-6xl text-green-500 mb-3 sm:mb-4"></i>
+            <h3 className="text-lg sm:text-xl font-bold mb-2">Plant a Tree Challenge</h3>
             <p className="text-muted-foreground text-sm">
               Water your tree and watch it grow through 3 stages!
             </p>
@@ -176,18 +176,18 @@ export const PlantTreeGame = ({ onGameComplete }: PlantTreeGameProps) => {
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
-      <CardContent className="p-6">
-        <div className="flex justify-between items-center mb-4">
-          <div className="text-lg font-semibold">Stage: {treeStage + 1}/4</div>
-          <div className="text-lg font-semibold">Waters: {waterClicks}</div>
-          <div className="text-lg font-semibold">Score: {score}</div>
+      <CardContent className="p-4 sm:p-6">
+        <div className="flex justify-between items-center mb-3 sm:mb-4">
+          <div className="text-base sm:text-lg font-semibold">Stage: {treeStage + 1}/4</div>
+          <div className="text-base sm:text-lg font-semibold">Waters: {waterClicks}</div>
+          <div className="text-base sm:text-lg font-semibold">Score: {score}</div>
         </div>
         <canvas
           ref={canvasRef}
-          className="w-full h-96 border border-border rounded-lg bg-gradient-to-br from-amber-50 to-green-100"
+          className="w-full h-64 sm:h-96 border border-border rounded-lg bg-gradient-to-br from-amber-50 to-green-100"
           data-testid="canvas-plant-tree"
         />
-        <p className="text-sm text-muted-foreground mt-2 text-center">
+        <p className="text-xs sm:text-sm text-muted-foreground mt-2 text-center">
           Click the blue watering button to help your tree grow!
         </p>
       </CardContent>
